@@ -58,7 +58,7 @@ return (
     style={props.style}
     onClick={onClick}
     >
-
+      {props.children}
     </button>
   )
 }
@@ -70,6 +70,7 @@ Button.propTypes ={
     href: propTypes.string,
     className: propTypes.string,
     isDisabled: propTypes.bool,
+    isPrimary: propTypes.bool,
     isExternal: propTypes.bool,
     isLoading: propTypes.bool,
     isSmall: propTypes.bool,
