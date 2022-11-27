@@ -13,14 +13,14 @@ export default function Hero(props) {
 
     function showMostPicked(){
         window.scrollTo({
-            top: props.refMostPicked.current.offsetTop = 30,
+            top: props.refMostPicked.current.offsetTop-30,
             behavior: "smooth"
         })
     }
 
 
   return (
-    <section className='container pt-4'>
+    <section className='container pt-4' style={{marginBottom:70}}>
       <div className='row align-items-center'>
         <div className='col-auto pr-5' style={{width: 530}}>
             <h1 className='font-weight-bold line-height-1 mb-3'>
