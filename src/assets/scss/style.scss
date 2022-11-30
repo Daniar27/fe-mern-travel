@@ -1,10 +1,11 @@
 /*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
+* Bootstrap v4.4.1 (https://getbootstrap.com/)
+* Copyright 2011-2019 The Bootstrap Authors
+* Copyright 2011-2019 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "colorVariables";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -43,6 +44,7 @@
 @import "utilities";
 @import "print";
 @import "container-grid";
+
 
 .brand-text-icon{
     font-size: 26px;
@@ -128,7 +130,7 @@ header{
         border-radius: 15px;
         &:after{
             position: absolute;
-            content: ""; top: 0; left: 0; right: 0; bottom: 0; transform: scale(1,1);
+            content: ""; top: 0; left: 0; right: 0; bottom: 0; transform: scale(1.1);
             transition: .5s transform ease-in-out;
             z-index: 2;
             @include gradient-y(rgba($black,0),rgba($black, .51),0%,100%)
@@ -139,7 +141,7 @@ header{
             z-index: 1;
             margin: 0;
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0; transform: scale(1,1); transition: .25s transform ease-in-out;
+            top: 0; left: 0; right: 0; bottom: 0; transform: scale(1.1); transition: .25s transform ease-in-out;
             
         }
 
@@ -174,4 +176,44 @@ header{
 }
 .img-contain{
     object-fit: contain; height: 100%; width: 100%;
+}
+
+.testimonial-hero, .testimonial-hero img{
+    width: 365px; height: 500px;
+}
+
+footer{
+    border-top: 1px solid $gray-200;
+    padding-top: 50px;
+
+    .brand-tagline{
+        margin-top: 8px;
+        color: $gray-500;
+        font-weight: 300;
+    }
+
+    .list-group-item{
+        padding: 0.3125rem 0;
+        border: 0;
+        a, span{
+            color: $gray-500;
+            font-weight: 300;
+        }
+        a{
+            @include hover-focus{
+               color: $gray-800; 
+            }
+        }
+    }
+    .copyrights{
+        margin-top: 50px 0;
+        margin-bottom: 25px;
+        font-weight: 300;
+        color: $gray-500;
+    }
+    h6{
+        font-weight: bold;
+        color: $gray-900;
+        margin-left: 38px;
+    }
 }
